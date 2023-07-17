@@ -66,3 +66,13 @@ header ul li a:active, .side-nav li a:active{
     text-decoration: underline;
     color: navy;
 }
+.hidden {
+    display: none;
+}
+
+
+@media(min-width:450px) {
+    .hidden {
+        display: block;
+    }
+}
