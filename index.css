@@ -3,6 +3,7 @@ body {
     padding: 0;
     font-family: 'Source Sans 3', sans-serif;
     color: black;
+    
 }
 * {
     box-sizing: border-box;
@@ -30,8 +31,9 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between ;
-    background-color: brown;
     position: relative;
+    margin-bottom: 0;
+    z-index: 0;
 }
 header img {
     width: 100%;
@@ -51,10 +53,15 @@ header img {
     justify-content: center;
     gap: 1em;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
+    height: auto;
+    margin-top: 0;
+    /* color: blue; */
+    
 }
+
 .side-nav-div {
     display: none;
+
 }
 
 header ul li a, .side-nav li a {
@@ -68,11 +75,94 @@ header ul li a:active, .side-nav li a:active{
 }
 .hidden {
     display: none;
+    
 }
 
+
+/* hero */
+
+ .hero {
+    background-image: url('./images/background-image.png');
+    background-size: cover;
+    color: white;
+    width: 100%;
+    padding: 0 0.5em;
+    
+} 
+.hero p:first-child {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 4em;
+    font-size: 0.75em;
+    color: gray;
+   
+}
+
+.hero h1 {
+  font-size: 2rem ;
+  line-height: 1;
+  margin-top:0.2em;
+    text-shadow: 1px 1px 1px white;
+  font-weight: 900;
+  margin-bottom: 0.2em;
+}
+
+.hero p:nth-child(3) {
+    margin-top: 0.2em;
+    line-height: 1.5;
+    font-size: 0.8rem;
+    max-width: 550px;
+
+}
+.journey-hero {
+    background-image: none;
+    color: black
+}
+.journey-hero img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+}
+/* grid section */
+.grid {
+    margin-top: 0;
+}
+
+.grid h3 {
+    margin: 0;
+    font-weight: 900;
+    
+}
+
+.grid image {
+    margin-bottom: 0;
+}
+.inside-grid {
+    margin-bottom: 1em;
+}
+.inside-grid p{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 0.75em;
+}
+
+/* media queries */
+
+@media(min-width: 450px) and (max-width: 600px) {
+    .grid {
+        display: grid;
+        grid-template: repeat(2, auto) / repeat(2, 1fr)
+    }
+}
 
 @media(min-width:450px) {
     .hidden {
         display: block;
+    }
+}
+@media(min-width: 600px) {
+    .grid {
+        display: grid;
+        grid-template: repeat(3, auto) / repeat(3, 1fr)
     }
 }
