@@ -73,7 +73,7 @@ header ul li a:active, .side-nav li a:active{
     text-decoration: underline;
     color: navy;
 }
-.hidden {
+.hidden, .hid{
     display: none;
     
 }
@@ -116,6 +116,7 @@ header ul li a:active, .side-nav li a:active{
 }
 .journey-hero {
     background-image: none;
+    background-color: whitesmoke;
     color: black
 }
 .journey-hero img {
@@ -145,6 +146,39 @@ header ul li a:active, .side-nav li a:active{
     margin-bottom: 0;
     font-size: 0.75em;
 }
+#view-more {
+    border: none;
+    background-color: white;
+    font-weight: 800;
+    align-self: center;
+    text-decoration: underline;
+    margin: auto;
+    display: flex;
+}
+
+/* footer */ 
+footer {
+  text-align: center;
+  padding: 0.2em 0;
+    background-color: black;
+    color: white;
+}
+footer p:first-child {
+    margin-bottom: 0;
+}
+footer :nth-child(2) {
+    margin-top: 0;
+    color: gray;
+}
+.journey-history {
+    padding: 0.5em 0.5em;
+}
+.journey-history p {
+    line-height: 1.5;
+    font-size: 0.8rem;
+    /* max-width: 80%; */
+}
+
 
 /* media queries */
 
@@ -159,10 +193,71 @@ header ul li a:active, .side-nav li a:active{
     .hidden {
         display: block;
     }
+
+    #app-grid {
+        display: none;
+    }
+
+    .hero {
+        padding: 6em 0.2em 1em 0.2em
+    }
+
+    .journey-hero {
+        padding: 0 0.5em;
+    }
+    .journey-img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .inside-grid {
+        padding: 1em 0.2em;
+    }
 }
+
+.about-hero {
+    background-image: none;
+    color: black;
+    padding-top: 0;
+}
+.my-pix {
+    border-radius: 50%;
+    width: 50%;
+    padding-top: 1em;
+    padding-left: 0.5em;
+}
+
+
 @media(min-width: 600px) {
     .grid {
         display: grid;
         grid-template: repeat(3, auto) / repeat(3, 1fr)
+    }
+    .flex {
+        margin: 0 2em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1em;
+
+    }
+
+    .img-div {
+        width: 50%; 
+        margin-right: 0;
+      
+    }
+    .my-pix {
+        width: 90%;
+    }  
+
+    .journey-history {
+        padding: 0.5em 7em;
+
+    }
+    .journey-history p {
+        line-height: 1.5;
+        font-size: 0.8rem;
     }
 }
